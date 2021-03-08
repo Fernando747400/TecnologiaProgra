@@ -29,7 +29,7 @@ public class Calculadora : MonoBehaviour
 
     void calculo()
     {
-        double.TryParse(inp1.text,out num1);
+        double.TryParse(inp1.text, out num1);
         double.TryParse(inp2.text, out num2);
         switch (Seleccion())
         {

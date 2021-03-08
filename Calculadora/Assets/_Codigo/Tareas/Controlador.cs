@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Controlador : MonoBehaviour
 {
-    public GameManager gameManager;
+    // public GameManager gameManager;
     Rigidbody2D player;
     SpriteRenderer playerSprite;
     public LayerMask capasuelo;
@@ -76,10 +76,10 @@ public class Controlador : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Lava") || collision.gameObject.CompareTag("Pico"))
         {
-            gameManager.GameOver();
+           // gameManager.GameOver();
         } else if (collision.gameObject.CompareTag("Manzana"))
         {
-            Puntuacion.score++;
+           // Puntuacion.score++;
             Destroy(collision.GetComponent<Collider2D>());
             collision.GetComponent<Animator>().SetBool("recogido", true);
             

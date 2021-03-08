@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Controler : MonoBehaviour
 {
-    public GameManager gameManager;
+    // public GameManager gameManager;
     Rigidbody2D player;
     SpriteRenderer playerSprite;
     public LayerMask floorLayer;
@@ -79,11 +79,11 @@ public class Controler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Lava") || collision.gameObject.CompareTag("Spike"))
         {
-            gameManager.GameOver();
+           // gameManager.GameOver();
         }
         else if (collision.gameObject.CompareTag("Apple"))
         {
-            Scoreboard.score++;
+           // Scoreboard.score++;
             Destroy(collision.GetComponent<Collider2D>());
             collision.GetComponent<Animator>().SetBool("Picked", true);
 
